@@ -1,0 +1,19 @@
+# --- Secrets: never commit your API key ---
+key
+.env
+
+# --- App data (the background agent stores its key/venv here) ---
+.groq-dictate/
+
+# --- Python ---
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# --- macOS ---
+.DS_Store
+
+# --- Private / unrelated files that must never be published ---
+Agency_Engagement_Agent_KB.md
+groq-dictate/
