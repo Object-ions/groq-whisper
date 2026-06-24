@@ -201,9 +201,7 @@ step and make sure you pasted your real key between the quotes.
 
 ## Step 6 — Download this project
 
-This downloads the project onto your Desktop. In the command below, replace
-`<MY_GITHUB_USERNAME>` with the actual GitHub username (it's already filled in if
-you're reading this on the project's GitHub page).
+This downloads the project onto your Desktop. Just copy the commands below as-is.
 
 ```bash
 cd ~/Desktop
