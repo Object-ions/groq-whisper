@@ -207,7 +207,7 @@ you're reading this on the project's GitHub page).
 
 ```bash
 cd ~/Desktop
-git clone https://github.com/<MY_GITHUB_USERNAME>/groq-whisper.git
+git clone https://github.com/object-ions/groq-whisper.git
 cd groq-whisper
 ```
 
