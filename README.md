@@ -1,8 +1,8 @@
-# groq-whisper
+# groq-dictate
 
 **Hold a key, talk, and your words get typed wherever your cursor is.**
 
-groq-whisper is a tiny push-to-talk dictation tool for the Mac. You hold down a
+groq-dictate is a tiny push-to-talk dictation tool for the Mac. You hold down a
 key (the **Option** key by default), speak a sentence, and let go. Your speech is
 sent to [Groq](https://groq.com)'s super-fast Whisper service, turned into text,
 and typed straight into whatever field you're focused on — a browser search box,
@@ -205,19 +205,19 @@ This downloads the project onto your Desktop. Just copy the commands below as-is
 
 ```bash
 cd ~/Desktop
-git clone https://github.com/object-ions/groq-whisper.git
-cd groq-whisper
+git clone https://github.com/object-ions/groq-dictate.git
+cd groq-dictate
 ```
 
 - `cd ~/Desktop` moves you into your Desktop folder.
-- `git clone …` downloads the project into a new folder called `groq-whisper`.
-- `cd groq-whisper` moves you inside that new folder, where the tool lives.
+- `git clone …` downloads the project into a new folder called `groq-dictate`.
+- `cd groq-dictate` moves you inside that new folder, where the tool lives.
 
 ---
 
 ## Step 7 — Run it
 
-From inside the `groq-whisper` folder, run:
+From inside the `groq-dictate` folder, run:
 
 ```bash
 uv run groq_dictate.py
@@ -276,7 +276,7 @@ them you must fully restart Terminal:
 3. Go back into the project and run it again:
 
    ```bash
-   cd ~/Desktop/groq-whisper
+   cd ~/Desktop/groq-dictate
    uv run groq_dictate.py
    ```
 
@@ -309,7 +309,7 @@ Typing `uv run …` every time is a chore. Let's make a shortcut so you can just
 type **`dictate`** from anywhere. Run these two lines once:
 
 ```bash
-echo "alias dictate='uv run ~/Desktop/groq-whisper/groq_dictate.py'" >> ~/.zshrc
+echo "alias dictate='uv run ~/Desktop/groq-dictate/groq_dictate.py'" >> ~/.zshrc
 source ~/.zshrc
 ```
 
@@ -329,7 +329,7 @@ it, and Terminal still needs the three permissions from
 
 You can tweak how the tool behaves by editing the **CONFIG** block near the top of
 `groq_dictate.py`. Open it in any text editor (or run
-`open -e ~/Desktop/groq-whisper/groq_dictate.py` to open it in TextEdit). You'll
+`open -e ~/Desktop/groq-dictate/groq_dictate.py` to open it in TextEdit). You'll
 see these settings:
 
 | Setting | What it does |
