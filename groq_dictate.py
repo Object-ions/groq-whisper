@@ -96,6 +96,16 @@ def stop_and_transcribe():
         return
 
     audio = np.concatenate(_frames, axis=0)
+
+    # Drop stray taps / silence before hitting the API.
+    # A quick double-tap of Option captures a sub-second, near-silent clip,
+    # and Whisper hallucinates "Thank you." on empty audio - so skip those.
+    duration = len(audio) / SAMPLE_RATE
+    rms = float(np.sqrt(np.mean(np.square(audio.astype(np.float64)))))
+    if duration < 0.4 or rms < 50:
+        print(f"(skipped - {duration:.2f}s, level {rms:.0f})", flush=True)
+        return
+
     with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tmp:
         path = tmp.name
     wavfile.write(path, SAMPLE_RATE, audio)
